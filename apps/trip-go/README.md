@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# Trip-Go 프로젝트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trip-Go는 **Vite**, **pnpm**, **Monorepo** 구조로 관리되는 웹 애플리케이션입니다. 이 프로젝트는 **여행 관련 서비스**를 제공하며, 현재 **개발 중**입니다.
 
-Currently, two official plugins are available:
+## 주요 기술 스택
+- **Vite**: 빠른 빌드 도구
+- **pnpm**: 패키지 관리
+- **React**: UI 라이브러리
+- **TypeScript**: 정적 타이핑
+- **Tailwind CSS**: 유틸리티 기반 CSS 프레임워크
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+ㅡㅡㅡㅡㅡㅡ
+### 명령어
+의존성 설치
+```
+pnpm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+개발 서버 실행
 ```
+pnpm dev
+
+```
+
+
+### 개발
+#### 브랜치 전략
+- main: 배포 가능한 상태의 최신 안정화 버전
+- dev: 개발 중인 기능을 포함한 브랜치
+- 각 기능은 별도의 브랜치에서 작업하고, 완료되면 PR을 통해 merge합니다.
+
+#### 커밋 메시지 규칙
+ 커밋 메시지는 아래와 같은 형식을 따릅니다:
+- feat: 새로운 기능 추가
+- fix: 버그 수정
+- docs: 문서 수정
+- style: 코드 스타일 변경
+- refactor: 리팩토링
+
+#### 기능 목록
+- 지역 관광지 정보 조회: 서울, 부산 등 주요 지역의 관광지 정보를 제공
+- 검색 기능: 관광지 이름, 위치 등으로 검색 가능
+- 지도 연동: 위치 기반으로 관광지 보기 제공
