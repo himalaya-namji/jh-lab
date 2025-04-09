@@ -1,0 +1,84 @@
+/* AreaCard.css */
+
+/* 카드 기본 스타일 */
+.area-card {
+    max-width: 350px;
+    /* 카드의 최대 너비 */
+    border-radius: 12px;
+    /* 카드 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 부드러운 그림자 */
+    background-color: #ffffff;
+    /* 배경색 */
+    overflow: hidden;
+    /* 내용이 카드 밖으로 나가지 않도록 */
+    transition: transform 0.3s ease;
+    /* 마우스 오버 시 변형 효과 */
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    /* 마우스 오버 시 위로 떠오르는 효과 */
+}
+
+/* 이미지 스타일 (고정된 크기) */
+.area-card__image {
+    width: 300px;
+    /* 카드 너비에 맞게 */
+    height: 200px;
+    /* 고정된 높이 */
+    /* object-fit: cover; */
+    /* 이미지 비율을 맞추고 잘리지 않도록 */
+}
+
+/* 카드 내용 영역 */
+.area-card__content {
+    padding: 16px;
+}
+
+/* 제목 스타일 */
+.area-card__title {
+    font-size: 1.25rem;
+    /* 제목 크기 */
+    font-weight: 600;
+    /* 제목 두께 */
+    color: #333;
+    /* 제목 색상 */
+    margin-bottom: 8px;
+    /* 제목과 그 아래 항목 간격 */
+}
+
+/* 주소 스타일 */
+.area-card__address {
+    font-size: 0.875rem;
+    /* 작은 텍스트 크기 */
+    color: #555;
+    /* 주소 색상 */
+    margin-bottom: 8px;
+    /* 주소와 그 아래 항목 간격 */
+}
+
+/* 전화번호 및 우편번호 텍스트 스타일 */
+.area-card__info {
+    font-size: 0.875rem;
+    color: #777;
+    /* 회색으로 표시 */
+    margin-bottom: 8px;
+    /* 항목 간격 */
+}
+
+/* 링크 스타일 */
+.area-card__link {
+    font-size: 0.875rem;
+    color: #007bff;
+    /* 파란색 */
+    text-decoration: none;
+    /* 밑줄 없애기 */
+    transition: color 0.3s ease;
+    /* 색 변화 */
+}
+
+.area-card__link:hover {
+    color: #0056b3;
+    /* 마우스 오버 시 색 변화 */
+}

@@ -1,0 +1,13 @@
+{
+  "name": "jh-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tripgo" : "pnpm -F @jh-lab/go-trip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

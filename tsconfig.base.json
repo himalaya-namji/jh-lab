@@ -1,0 +1,14 @@
+// tsconfig.base.json (or tsconfig.json at root)
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@trip-go/*": [
+                "apps/trip-go/src/*"
+            ],
+            "@ui/*": [
+                "packages/ui/src/*"
+            ]
+        }
+    }
+}
