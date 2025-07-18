@@ -1,11 +1,13 @@
 {
-  "name": "jh-front",
+  "name": "jh-lab",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "jh 프론트엔드 모노레포",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tripgo" : "pnpm -F @jh-lab/go-trip"
+    "dev": "pnpm --filter @jh-lab/trip-go dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test"
   },
   "keywords": [],
   "author": "",

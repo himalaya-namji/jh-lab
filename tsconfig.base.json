@@ -3,7 +3,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@trip-go/*": [
+            "@jh-lab/trip-go/*": [
                 "apps/trip-go/src/*"
             ],
             "@ui/*": [

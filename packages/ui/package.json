@@ -1,0 +1,10 @@
+{
+  "name": "@jh-lab/ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'ui dev'",
+    "build": "echo 'ui build'",
+    "lint": "echo 'ui lint'"
+  }
+}
