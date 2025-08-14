@@ -5,6 +5,7 @@
   "description": "jh 프론트엔드 모노레포",
   "scripts": {
     "dev": "pnpm --filter @jh-lab/trip-go dev",
+    "dev:react-ts-test": "pnpm --filter react-ts-test dev",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test"

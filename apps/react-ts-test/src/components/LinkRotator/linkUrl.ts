@@ -1,0 +1,1 @@
+export const naverURl = ['https://blog.naver.com/91namji/223942341914']

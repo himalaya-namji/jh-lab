@@ -1,0 +1,354 @@
+/* 전체 컨테이너 */
+.id-card-selector-v2 {
+  width: 360px;
+  height: 800px;
+  background-color: #ffffff;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accessibility Styles */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Focus Styles */
+.card-option:focus-visible,
+.back-button:focus-visible,
+.cancel-button:focus-visible {
+  outline: 2px solid #2589f4 !important;
+  outline-offset: 2px !important;
+}
+
+/* Button Reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee3e6;
+}
+
+.status-bar {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212528;
+}
+
+.status-icons {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.header {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #ffffff;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #212528;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #212528;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.cancel-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2589f4;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  height: calc(100% - 92px);
+  overflow-y: auto;
+}
+
+/* Title Section */
+.title-section {
+  margin-bottom: 32px;
+}
+
+.title-text {
+  justify-content: center;
+    height: 114px;
+    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-line {
+  font-size: 22px;
+  font-weight: 400;
+  color: #212528;
+  line-height: 30.8px;
+}
+
+.title-highlight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.highlight-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2589f4;
+  line-height: 30.8px;
+}
+
+/* Card Selection */
+.card-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-option {
+  background-color: #ffffff;
+  border: 1px solid #dee3e6;
+  border-radius: 24px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 120px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-option:hover {
+  border-color: #2589f4;
+  box-shadow: 0 2px 8px rgba(37, 137, 244, 0.1);
+}
+
+.card-option.selected {
+  border-color: #2589f4;
+  border-width: 2px;
+  background-color: #f8fbff;
+  box-shadow: 0 4px 12px rgba(37, 137, 244, 0.15);
+  transform: translateY(-1px);
+}
+
+.card-option.mobile-card.selected {
+  height: auto;
+  min-height: 120px;
+}
+
+.card-option.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-color: #2589f4;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 72px;
+  width: 100%;
+  min-width: 0; /* flex item이 부모를 초과하지 않도록 */
+}
+
+.card-icon {
+  flex-shrink: 0;
+}
+
+.icon-bg {
+  width: 72px;
+  height: 72px;
+  background-color: #f3f5f7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.card-option.selected .icon-bg {
+  background-color: #e3f2ff;
+}
+
+.icon {
+  font-size: 36px;
+}
+
+.card-info {
+  flex: 1;
+  min-width: 0; /* flex item이 부모를 초과하지 않도록 */
+  overflow: hidden; /* 텍스트가 넘칠 경우 숨김 */
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212528;
+  margin: 0 0 4px 0;
+  line-height: 25.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.card-option.selected .card-name {
+  color: #2589f4;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #6d747b;
+  margin: 0;
+  line-height: 19.6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bank Selection */
+.bank-selection {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #dee3e6;
+}
+
+.bank-list {
+  /* background-color: rgba(37, 137, 244, 0.05); */
+  /* border: 1px solid rgba(37, 137, 244, 0.1); */
+  /* border-radius: 12px; */
+  padding: 8px 16px;
+}
+
+.bank-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.bank-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bank-icon-text {
+  font-size: 12px;
+}
+
+.bank-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bank-name {
+  font-size: 10px;
+  font-weight: 500;
+  color: #070f16;
+  opacity: 0.82;
+  line-height: 19.6px;
+}
+
+.bank-time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #323f4f;
+  opacity: 0.55;
+  line-height: 16.8px;
+}
+
+.bank-arrow {
+  font-size: 16px;
+  color: #778697;
+  opacity: 0.24;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .id-card-selector-v2 {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .card-option {
+    width: 100%;
+  }
+  
+  .card-content {
+    width: 100%;
+  }
+} 
